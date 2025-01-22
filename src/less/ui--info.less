@@ -1,0 +1,28 @@
+// toggle
+.ui-toggle--info {
+	position: fixed;
+	right: 0;
+	top: 0;
+
+	display: block;
+	margin: 1rem 1rem 0 0;
+
+	font-size: 0.875rem;
+	line-height: 1;
+	text-transform: uppercase;
+	color: inherit;
+
+	opacity: 0.5;
+
+	&:hover {
+		.animation--blink;
+	}	
+}
+
+// modal
+.ui-modal--info {
+
+	.visible--ui-info & {
+		.ui-modal.visible;
+	}
+}

@@ -1,0 +1,89 @@
+.ui-modal {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 1000;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 0;
+
+	background: fade( @color--bg, 90% );
+
+	overflow: hidden;
+
+	opacity: 0;
+
+	transition-property: opacity, bottom;
+	transition-duration: 250ms, 100ms;
+	transition-delay: 0ms, 250ms;
+	transition-timing-function: ease;
+
+	&:target,
+	&.visible {
+		height: 100%;
+
+		opacity: 1;
+
+		transition-duration: 250ms, 100ms;
+		transition-delay: 0ms, 0ms;
+	}
+}
+
+.ui-modal-content {
+	display: block;
+
+	max-width: 48rem;
+	margin: 1rem;
+
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1.75;
+
+	& > h4 {
+		margin: 2rem 0;
+	}
+
+	& > p {
+		margin: 2rem 0;
+	}
+}
+
+.modal-actions {
+	margin: 2.5rem 0 2rem;
+
+	text-align: center;
+}
+
+.modal-actions > .button {
+
+}
+
+.ui-modal-close {
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	display: block;
+	margin: 1rem;
+
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1;
+	color: inherit;
+
+	&:hover {
+		.animation--blink;
+	}
+}
+
+
+@media screen and ( max-height: 480px ) {
+	.ui-modal-content {
+		font-size: 0.75rem;
+	}
+}

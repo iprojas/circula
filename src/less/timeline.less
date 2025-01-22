@@ -1,0 +1,53 @@
+.timeline-wrapper {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 0;
+
+	width: 70vh;
+	height: 70vh;
+	margin: ~'calc( -35vh - 2.5rem )' 0 0 -35vh;
+
+	overflow: hidden;
+
+	transition: opacity 750ms ease;
+
+	.resizing & {
+		opacity: 0;
+
+		transition-duration: 150ms;
+	}
+}
+
+.timeline-wrapper > svg {
+	display: block;
+
+	transform-origin: 0 0;
+}
+
+#placeholder {
+	display: none;
+}
+
+
+@media screen and ( orientation: portrait ) {
+	.timeline-wrapper {
+		width: 80vw;
+		height: 80vw;
+		margin: ~'calc( -40vw - 2.5rem )' 0 0 -40vw;
+	}
+}
+
+
+@media screen and ( orientation: portrait ) and ( max-width: 460px ) {
+	.timeline-wrapper {
+		margin-top: ~'calc( -40vw - 6rem )';
+	}
+}
+
+
+@media screen and ( max-height: 480px ) {
+	.timeline-wrapper {
+		margin-top: ~'calc( -40vw - 5rem )';
+	}
+}

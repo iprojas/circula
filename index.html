@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+
+		<title>108</title>
+
+		<script>
+			document.getElementsByTagName( 'html' )[0].className += ' js';
+			document.getElementsByTagName( 'html' )[0].className = document.getElementsByTagName( 'html' )[0].className.replace( 'no-js', '' );
+		</script>
+
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+		<meta name="description" content="A minimal beat machine played in the browser.">
+
+		<!-- CSS -->
+		<link type="text/css" rel="stylesheet" href="dist/fonts/lab-mono.css">
+		<link type="text/css" rel="stylesheet" href="dist/css/108.css?20180226">
+
+		<!-- FACEBOOK meta -->
+		<meta property="og:site_name" content="108">
+		<meta property="og:description" content="A minimal beat machine played in the browser.">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="dist/meta/facebook.png">
+
+		<!-- TWITTER meta -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:url" content="http://martinwecke.de/108">
+		<meta name="twitter:title" content="108">
+		<meta name="twitter:description" content="A minimal beat machine played in the browser.">
+		<meta name="twitter:image" content="http://martinwecke.de/108/dist/meta/facebook.png">
+		<meta name="twitter:creator" content="@martinwecke">
+
+		<!-- JS -->
+		<script type="text/javascript" src="dist/js/dependencies.min.js?20180226"></script>
+
+		<script type="text/javascript" src="src/js/debug.js?20180226"></script>
+		<script type="text/javascript" src="src/js/viewport.js?20180226"></script>
+		<script type="text/javascript" src="src/js/sequencer.js?20180227"></script>
+		<script type="text/javascript" src="src/js/timeline.js?20180226"></script>
+		<script type="text/javascript" src="src/js/ui.js?20180226"></script>
+		<script type="text/javascript" src="src/js/url.js?20180226"></script>
+		<script type="text/javascript" src="src/js/intro.js?20180226"></script>
+		<script type="text/javascript" src="src/js/title.js?20180226"></script>
+		<script type="text/javascript" src="src/js/history.js?20180226"></script>
+		<script type="text/javascript" src="src/js/recorder.js?20180226"></script>
+
+		<!-- PIWIK -->
+		<script type="text/javascript">
+var _paq = _paq || [];
+_paq.push(['setDomains', ['*.martinwecke.de','*.2016.martinwecke.de']]);
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+( function() {
+	var u='//stats.hatsumatsu.de/';
+	_paq.push(['setTrackerUrl', u+'piwik.php']);
+	_paq.push(['setSiteId', 7]);
+	var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+} )();
+		</script>
+		<noscript>
+			<img src="//stats.hatsumatsu.de/piwik.php?idsite=7" style="border:0;" alt="">
+		</noscript>
+		<!-- / PIWIK -->
+	</head>
+	<body id="body">
+		<!-- TITLE -->
+		<h1>
+			CIRCULA
+		</h1>
+
+		<!-- TIMELINE -->
+		<div class="timeline-wrapper">
+
+		</div>
+
+		<!-- CONTROLS -->
+		<div class="ui--controls">
+			<div class="button-row">
+				<a href="#" class="ui-toggle ui-toggle--controls" title="Toggle controls">
+					ctrl
+				</a>
+
+				<a href="#" class="control-button" data-sample="0" data-key="c" title="Play sample">
+					C
+				</a>
+				<a href="#" class="control-button" data-sample="1" data-key="v" title="Play sample">
+					V
+				</a>
+				<a href="#" class="control-button" data-sample="2" data-key="b" title="Play sample">
+					B
+				</a>
+				<a href="#" class="control-button" data-sample="3" data-key="n" title="Play sample">
+					N
+				</a>
+				<a href="#" class="control-button" data-sample="4" data-key="m" title="Play sample">
+					M
+				</a>
+
+				<a href="#" class="control-button control-button--narrow control-button--no-feedback" data-key="z" data-action="undo" title="undo">
+					Z
+				</a>
+
+				<a href="#" class="control-button control-button--narrow control-button--no-feedback" data-key="space" data-action="play" title="play / pause">
+					_
+				</a>
+
+				<a href="#" class="control-button control-button--narrow control-button--no-feedback" data-key="q" data-action="clear" title="Clear loop">
+					X
+				</a>
+
+				<a href="#" class="control-button control-button--narrow control-button--no-feedback" data-key="r" data-action="record" title="Record audio">
+					R
+				</a>
+
+				<a href="#" class="control-button control-button--narrow control-button--no-feedback" data-key="shift" data-action="metronome" title="Toggle metronome">
+					/
+				</a>
+			</div>
+		</div>
+
+		<!-- UI INFO -->
+		<div class="ui--info" data-modal="info">
+			<a href="#" class="ui-toggle ui-toggle--info" data-modal-action="toggle">
+				info
+			</a>
+
+			<div class="ui-modal ui-modal--info" id="info">
+				<a href="#" class="ui-modal-close ui-modal-close--info" data-modal-action="toggle">
+					x
+				</a>
+				<div class="ui-modal-content">
+					<p>
+<a href="http://martinwecke.de/108">CIRCULAR</a>es una máquina de ritmo.
+
+
+					</br></br>
+						Usa las teclas  <span class="key">C</span> <span class="key">V</span> <span class="key">B</span> <span class="key">N</span> <span class="key">M</span> para reproducir los samples. 
+					</p>
+
+					<div class="modal-actions modal-actions--info">
+						<a href="#" class="button" data-modal-action="toggle" data-sequencer-role="buttonStart">
+							Empezar!
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- INTRO -->
+		<div class="intro">
+			<span class="intro-title">
+				108
+			</span>
+		</div>
+
+		<!-- NO JS MESSAGE -->
+		<noscript>
+			<div class="ui-modal ui-modal--nojs visible">
+				<div class="ui-modal-content">
+					No Javascript, no music...
+				</div>
+			</div>
+		</noscript>
+
+	</body>
+</html>
